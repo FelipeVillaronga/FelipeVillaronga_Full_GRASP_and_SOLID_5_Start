@@ -9,7 +9,8 @@ using System.Collections.Generic;
 
 namespace Full_GRASP_And_SOLID
 {
-    public class Recipe
+    // La clase Recipe ahora implementa la interfaz IContent, a fin de vincular de forma indirecta e independiente los Printers con el método GetTextToPrint
+    public class Recipe : IContent
     {
         // Cambiado por OCP
         private IList<BaseStep> steps = new List<BaseStep>();
